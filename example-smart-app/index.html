@@ -129,7 +129,8 @@
 				}
 				}).then(function(response) {
 					console.log("about to log response");
-				console.log(response)
+					console.log(response);
+					$("#obvDiv").html("got an observation");
 				});		
 				
 			patientApi.fetchAll({
