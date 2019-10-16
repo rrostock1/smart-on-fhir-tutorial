@@ -130,7 +130,12 @@
 				}).then(function(response) {
 					console.log("about to log response");
 					console.log(response);
-					$("#obvDiv").html("got an observation");
+					var observationsHtml = [];
+					//$("#obvDiv").html("got an observation");
+					response.forEach(function(responseItem){
+						observationsHtml.push(responseItem.text.div);
+					});
+					$("#obvDiv").html(observationsHtml.join(""));
 				});		
 				
 			patientApi.fetchAll({
