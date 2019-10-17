@@ -129,6 +129,12 @@
 			});
 
 			patientApi.fetchAll({
+				type: 'Encounter'
+			}).then(function(response) {
+				console.log("encounter response = ");
+				console.log(response);
+			});
+			patientApi.fetchAll({
 				type: 'Observation',
 				query: {
 				category: {
