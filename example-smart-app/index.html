@@ -134,12 +134,13 @@
 				console.log("encounter response = ");
 				console.log(response);
 				
-				var encounters = response.filter(encounter => {console.log(encounter.identifier); return(encounter.identifier && encounter.identifier.length > 0 
+				var encounters = response.filter(encounter => {return(encounter.identifier && 
+					encounter.identifier.length > 0 
 					&& encounter.identifier[0].system == "urn:oid:3.3.3.3.3.3")});
 
-				console.log(encounters.length);
-				console.log(encounters[0].identifier[0]);
-				$("demo-fin").html(encounters[0].identifier[0].value);
+				//console.log(encounters.length);
+				//console.log(encounters[0].identifier[0]);
+				$("#demo-fin").html(encounters[0].identifier[0].value);
 				
 
 				$("#demo-rfv").html(response[0].reason[0].text);
