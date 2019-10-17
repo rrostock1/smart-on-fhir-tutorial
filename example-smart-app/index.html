@@ -120,7 +120,7 @@
 				var names = response[0].name;
 				const officialPatientNames = names.filter(name => name.use == "official");
 				console.log(officialPatientNames[0].text);
-				$("#demo-name").html(officialPatientName[0].text);
+				$("#demo-name").html(officialPatientNames[0].text);
 			});
 
 			patientApi.fetchAll({
