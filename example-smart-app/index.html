@@ -123,6 +123,9 @@
 				$("#demo-name").html(officialPatientNames[0].text);
 				$("#demo-gender").html(response[0].gender);
 				$("#demo-dob").html(response[0].birthDate);
+				var identifiers = response[0].identifier;
+				const mrnIdentifiers = identifiers.filter(identifier => identifier.system == "urn:oid:1.1.1.1.1.1")
+				$("#demo-mrn").html(mrnIdentifiers[0].value);
 			});
 
 			patientApi.fetchAll({
