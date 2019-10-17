@@ -119,7 +119,7 @@
 				console.log(response);
 				var names = response[0].name;
 				const officialPatientNames = names.filter(name => name.use == "official");
-				console.log(officialPatientName[0].text);
+				console.log(officialPatientNames[0].text);
 				$("#demo-name").html(officialPatientName[0].text);
 			});
 
