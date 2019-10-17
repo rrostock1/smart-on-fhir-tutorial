@@ -134,8 +134,8 @@
 				console.log("encounter response = ");
 				console.log(response);
 				
-				var encounters = response.filter(encounter => {debugger;encounter.identifier && encounter.identifier.length > 0 
-					&& encounter.identifier[0].system == "urn:oid:3.3.3.3.3.3"});
+				var encounters = response.filter(encounter => {console.log(encounter.identifier); return(encounter.identifier && encounter.identifier.length > 0 
+					&& encounter.identifier[0].system == "urn:oid:3.3.3.3.3.3")});
 				$("demo-fin").html(encounters[0].identifier[0].value);
 				
 
